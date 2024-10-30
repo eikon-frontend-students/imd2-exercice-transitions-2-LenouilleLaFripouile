@@ -65,7 +65,17 @@ video {
   position: relative;
 }
 
+.product-image:hover {
+  .product-cart {
+    opacity: 100%;
+  }
+  .buy {
+    transform: translateY(0px);
+  }
+}
+
 .product-cart {
+  opacity: 0%;
   position: absolute;
   inset: auto 10px 10px;
   padding: 6px;
@@ -73,6 +83,11 @@ video {
   border: solid 1px var(--blue);
   border-radius: 20px;
   text-align: center;
+  transition: 0.5s;
+}
+
+.product-cart:hover {
+  background-color: #2c5192;
 }
 
 .product-title {
@@ -101,6 +116,72 @@ video {
   gap: 12px;
 }
 
+.buy {
+  transform: translateY(-100px);
+}
 // ---------------------------------------------
 // Votre code ici :
 // ---------------------------------------------
+
+.scissors:hover {
+  background-color: #2c5192;
+  h3 {
+    color: #fff;
+  }
+  .product-price {
+    color: rgb(240, 240, 240);
+  }
+}
+.scissors {
+  transition: 0.5s;
+}
+.sketchbook .product-image img:hover {
+  transform: scale(1.3);
+}
+.sketchbook .product-image {
+  overflow: hidden;
+}
+.sketchbook .product-image img {
+  transition: 0.5s;
+}
+
+.glue .product-image {
+  filter: blur(3px);
+  transition: 0.5s;
+}
+.glue .product-image:hover {
+  filter: blur(0px);
+}
+
+.share {
+  .instagram {
+    transform: translateY(-20px);
+    opacity: 0%;
+    transition: 0.4s;
+  }
+  .tiktoks {
+    transform: translateY(-30px);
+    opacity: 0%;
+    transition: 0.8s;
+  }
+  .facebook {
+    transform: translateY(-40px);
+    opacity: 0%;
+    transition: 1.2s;
+  }
+}
+
+.share:hover {
+  .instagram {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+  .tiktoks {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+  .facebook {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
